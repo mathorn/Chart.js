@@ -94,6 +94,7 @@
 				var datasetObject = {
 					label : dataset.label || null,
 					fillColor : dataset.fillColor,
+					strokeWidth : dataset.strokeWidth,
 					strokeColor : dataset.strokeColor,
 					pointColor : dataset.pointColor,
 					pointStrokeColor : dataset.pointStrokeColor,
