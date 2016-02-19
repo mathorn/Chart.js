@@ -2603,6 +2603,7 @@
 				var datasetObject = {
 					label : dataset.label || null,
 					fillColor : dataset.fillColor,
+					strokeWidth : dataset.strokeWidth,
 					strokeColor : dataset.strokeColor,
 					pointColor : dataset.pointColor,
 					pointStrokeColor : dataset.pointStrokeColor,
@@ -2737,6 +2738,7 @@
 					label : label,
 					x: this.scale.calculateX(this.scale.valuesCount+1),
 					y: this.scale.endPoint,
+          strokeWidth : this.datasets[datasetIndex].strokeWidth,
 					strokeColor : this.datasets[datasetIndex].pointStrokeColor,
 					fillColor : this.datasets[datasetIndex].pointColor
 				}));
@@ -2831,7 +2833,7 @@
 
 
 				//Draw the line between all the points
-				ctx.lineWidth = this.options.datasetStrokeWidth;
+        ctx.lineWidth = dataset.strokeWidth || this.options.datasetStrokeWidth;
 				ctx.strokeStyle = dataset.strokeColor;
 				ctx.beginPath();
 
